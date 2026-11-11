@@ -2,21 +2,28 @@
 
 Writes the (hardcoded, deterministic) summary to /output/entry.txt.
 Python 3.13 stdlib only; no network.
+
+Revision (11 Nov 2026, evening WIB): the morning draft left the US House
+shutdown vote pending; this version reports its outcome (House 222-209,
+Trump signed that night), the Abu Dhabi day-2 outcome (no breakthrough,
+prisoner swap agreed, envoys to Moscow), and adds the Hegseth vote, the
+COP31 leaders' session, Spain's general strike and Kenya's Ebola
+all-clear, with a source named for each paragraph.
 """
 
 import os
 
 SUMMARY = """Wednesday, 11 November 2026
 
-America's government shutdown was hours from ending. The Senate passed a funding deal 60-40 on Monday after 41 days, the longest shutdown in US history, and the House was due to vote on Wednesday evening. It funds most of the government until 30 January, but health-insurance subsidies expiring at year-end remain unresolved. Federal workers went unpaid, food aid was delayed and flights were disrupted.
+America's record 43-day shutdown ended: the House passed the funding deal 222-209 and President Donald Trump signed it that night, funding most of the government until 30 January; health-insurance subsidies expiring at year-end stay unresolved. The House also voted 211-204 to refer eight impeachment articles against Defence Secretary Pete Hegseth to committee, halting the push. (AP, Reuters)
 
-In Abu Dhabi, US-brokered talks between Russia and Ukraine entered a second day, the first trilateral meeting since February. President Volodymyr Zelenskiy called day one constructive, with prisoner exchanges and security guarantees on the agenda. Meanwhile, Russia struck Ukraine's power grid, hitting five substations in 10 regions and killing two people.
+In Abu Dhabi, the second day of US-brokered talks between Russia and Ukraine ended after under two hours with no breakthrough, though Russia's negotiator said a prisoner swap was agreed and US envoys Steve Witkoff and Jared Kushner will take the talks to President Vladimir Putin in Moscow. Russia struck six large power substations in four Ukrainian regions; drone debris killed two people in Russia's Smolensk region. (Reuters, CNN)
 
-In the Gulf, tankers were still burning in the Strait of Hormuz despite hopes of US-Iran de-escalation. Three tankers were hit on Sunday, Iran's Revolutionary Guard said, and 37 ships were attacked in October, the most in a month since the conflict began in February.
+In the Gulf, tankers burned in the Strait of Hormuz despite hopes of US-Iran de-escalation: three were hit on Sunday, and 37 ships were attacked in October, the most in a month since the conflict began in February. (Reuters)
 
-In business, Anthropic priced its Nasdaq listing at $70-$78 a share, valuing it at up to about $1.4 trillion, with trading expected around 19 November. Nvidia and Google are each investing $10 billion alongside it. Nvidia was under pressure after President Donald Trump confirmed the FBI is examining CEO Jensen Huang's relationship with a woman suspected of being a Chinese agent. Its shares fell 4% on Monday.
+In business, Anthropic priced its Nasdaq listing at $70-$78 a share, valuing it at up to $1.4 trillion, with trading expected around 19 November; Nvidia and Google each invest $10 billion. Nvidia fell 4% on Monday after President Trump confirmed the FBI is examining CEO Jensen Huang's relationship with a woman suspected of being a Chinese agent. (Barron's, Reuters)
 
-Elsewhere, world leaders gathered in Antalya for the COP31 leaders' summit. Israel's new Knesset was sworn in with no government in sight: Benjamin Netanyahu's bloc holds 53 of 120 seats, Gadi Eisenkot's 48. US prosecutors charged three men over an alleged Iran-backed plot against RAF Fairford in Britain. And in South Korea, a bus ploughed into 32 vehicles in Seongnam, injuring 57 people, nine seriously."""
+Elsewhere, UN chief Antonio Guterres told COP31 leaders in Antalya the climate crisis is 'outrunning us'; the US stayed away for a second year. Spain held its first general strike in 14 years over housing, Kenya discharged its last Ebola patient, starting a 42-day countdown to an Ebola-free declaration, and Israel's new Knesset was sworn in with no government in sight: Netanyahu's bloc holds 53 of 120 seats, Eisenkot's 48. US prosecutors charged three men over an alleged Iran-backed plot against RAF Fairford in Britain. (Reuters, AP)"""
 
 
 def main() -> None:
